@@ -1,33 +1,11 @@
+import Header from "./components/Header";
+import UserInput from "./components/UserInput";
+
 function App() {
   return (
     <>
-      <div id="header">
-        <img src="investment-calculator-logo.png" alt="Investment picture" />
-        <h1>Investment Calculator</h1>
-      </div>
-      <div id="user-input">
-        <div className="input-group">
-          <div>
-            <label>Initial Investment</label>
-            <input type="number" />
-          </div>
-          <div>
-            <label>Annual Investment</label>
-            <input type="number" />
-          </div>
-        </div>
-        <br />
-        <div className="input-group">
-          <div>
-            <label>Expected Return</label>
-            <input type="number" />
-          </div>
-          <div>
-            <label>Duration</label>
-            <input type="number" />
-          </div>
-        </div>
-      </div>
+      <Header />
+      <UserInput />
 
       <table id="result">
         <thead>
