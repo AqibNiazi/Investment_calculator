@@ -1,21 +1,4 @@
-import React, { useState } from "react";
-
-const UserInput = () => {
-  const [userInput, setUserInput] = useState({
-    initialInvestment: 10000,
-    annualInvestment: 1200,
-    expectedReturn: 6,
-    duration: 10,
-  });
-
-  const handleChange = (investmentSymbol, newValue) => {
-    setUserInput((prevInput) => {
-      return {
-        ...prevInput,
-        [investmentSymbol]: newValue,
-      };
-    });
-  };
+const UserInput = ({ inputHandler, userInput }) => {
   return (
     <section id="user-input">
       <div className="input-group">
@@ -25,7 +8,7 @@ const UserInput = () => {
             type="number"
             required
             value={userInput.initialInvestment}
-            onChange={(e) => handleChange("initialInvestment", e.target.value)}
+            onChange={(e) => inputHandler("initialInvestment", e.target.value)}
           />
         </p>
         <p>
@@ -34,7 +17,7 @@ const UserInput = () => {
             type="number"
             required
             value={userInput.annualInvestment}
-            onChange={(e) => handleChange("annualInvestment", e.target.value)}
+            onChange={(e) => inputHandler("annualInvestment", e.target.value)}
           />
         </p>
       </div>
@@ -45,7 +28,7 @@ const UserInput = () => {
             type="number"
             required
             value={userInput.expectedReturn}
-            onChange={(e) => handleChange("expectedReturn", e.target.value)}
+            onChange={(e) => inputHandler("expectedReturn", e.target.value)}
           />
         </p>
         <p>
@@ -54,7 +37,7 @@ const UserInput = () => {
             type="number"
             required
             value={userInput.duration}
-            onChange={(e) => handleChange("duration", e.target.value)}
+            onChange={(e) => inputHandler("duration", e.target.value)}
           />
         </p>
       </div>
