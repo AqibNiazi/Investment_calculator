@@ -33,7 +33,7 @@ It then calculates and displays the results in an easy-to-read format, providing
    ```
 
 ## 📸 Screenshot
-(Attach a screenshot of your project here)
+![project dashboard](https://github.com/AqibNiazi/Investment_calculator/blob/main/public/Investment-calculator.png)
 
 ## 🌟 Contributing
 Feel free to submit issues or pull requests if you have improvements! 🤝
